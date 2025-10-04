@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🎥 YouTube – Conscious MB Demo Enhanced</title>
+<style>
+body {
+font-family: "Poppins", sans-serif;
+background: #0f0f0f;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding-top: 40px;
+margin: 0;
+}
+.container {
+background: #181818;
+border-radius: 16px;
+box-shadow: 0 0 15px rgba(255,255,255,0.1);
+padding: 24px;
+width: 380px;
+text-align: center;
+}
+h2 { color: #ff0000; margin-bottom: 10px; }
+.data-section, .quality-list, .player-section {
+margin-top: 20px;
+text-align: left;
+}
+input[type=range] { width: 100%; accent-color: #ff0000; }
+.quality {
+background: #222;
+padding: 10px;
+border-radius: 10px;
+margin: 8px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: all 0.3s ease;
+}
+.quality.green { border-left: 5px solid #00ff88; background: rgba(0,255,136,0.08); }
+.quality.red { border-left: 5px solid #ff5555; background: rgba(255,85,85,0.08); }
+.highlight { color: #00ff88; font-weight: bold; }
+.footer { margin-top: 15px; font-size: 13px; color: #aaa; text-align: center; }
+button {
+margin-top: 15px;
+padding: 8px 16px;
+border: none;
+border-radius: 8px;
+background-color: #ff0000;
+color: #fff;
+cursor: pointer;
+font-size: 14px;
+}
+.progress-bar {
+width: 100%;
+height: 12px;
+background: #333;
+border-radius: 8px;
+margin-top: 10px;
+overflow: hidden;
+}
+.progress-fill {
+height: 100%;
+width: 0%;
+background: #00ff88;
+transition: width 0.2s linear;
+}
+.ai-suggestion { margin-top: 10px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>🎥 Conscious MB</h2>
+<p style="font-size:14px;">“Know before you watch.” — Manage data & quality smartly.</p>
+
+<div class="data-section">
+<label>Total Data Balance (MB):</label>
+<input type="number" id="totalData" value="250" min="50" max="2000" style="width:80px;" /><br/><br/>
+<label>🔐 Reserve for Emergency Apps: <span id="reserveValue">100</span> MB</label>
+<input type="range" id="reserveSlider" min="0" max="200" value="100" />
+<p>🧮 Available for Video: <span id="availableData" class="highlight">150</span> MB</p>
+</div>
+
+<div class="quality-list">
+<div class="quality" data-mb="600"><span>1080p</span><span class="data">600 MB</span></div>
+<div class="quality" data-mb="400"><span>720p</span><span class="data">400 MB</span></div>
+<div class="quality" data-mb="250"><span>480p</span><span class="data">250 MB</span></div>
+<div class="quality" data-mb="180"><span>360p</span><span class="data">180 MB</span></div>
+<div class="quality" data-mb="140"><span>240p</span><span class="data">140 MB</span></div>
+<div class="quality" data-mb="120"><span>144p</span><span class="data">120 MB</span></div>
+</div>
+
+<div class="player-section">
+<button id="playBtn">▶️ Play Simulation</button>
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<p id="dataUsedText">Data Used: 0 MB</p>
+<div class="ai-suggestion" id="aiSuggestion"></div>
+</div>
+
+<div class="footer">
+🟢 = Playable | 🔴 = Exceeds Available Data <br/>
+UX Case Study by <b>Raguram Narayanaswamy</b>
+</div>
+</div>
+
+<script>
+const totalDataInput = document.getElementById("totalData");
+const reserveSlider = document.getElementById("reserveSlider");
+const reserveValue = document.getElementById("reserveValue");
+const availableData = document.getElementById("availableData");
+const qualityItems = document.querySelectorAll(".quality");
+const playBtn = document.getElementById("playBtn");
+const progressFill = document.getElementById("progressFill");
+const dataUsedText = document.getElementById("dataUsedText");
+const aiSuggestion = document.getElementById("aiSuggestion");
+
+let simulationInterval;
+let selectedQualityMB = 180; // default 360p
+
+function updateQualityColors() {
+const total = parseInt(totalDataInput.value);
+const reserve = parseInt(reserveSlider.value);
+const available = total - reserve;
+availableData.textContent = available;
+
+let bestOption = null;
+
+qualityItems.forEach((item) => {
+const mb = parseInt(item.dataset.mb);
+item.classList.remove("green", "red");
+if (mb <= available) {
+item.classList.add("green");
+if(!bestOption || mb > bestOption.dataset.mb){
+bestOption = item;
+}
+} else {
+item.classList.add("red");
+}
+});
+
+if(bestOption){
+aiSuggestion.textContent = `💡 Best Quality Suggestion: ${bestOption.querySelector("span").innerText} (${bestOption.dataset.mb} MB — Safe)`;
+selectedQualityMB = parseInt(bestOption.dataset.mb);
+} else {
+aiSuggestion.textContent = "💡 No quality fits within available MB!";
+selectedQualityMB = 0;
+}
+}
+
+reserveSlider.addEventListener("input", () => {
+reserveValue.textContent = reserveSlider.value;
+updateQualityColors();
+});
+
+totalDataInput.addEventListener("input", updateQualityColors);
+
+qualityItems.forEach(item => {
+item.addEventListener("click", () => {
+const mb = parseInt(item.dataset.mb);
+const available = parseInt(availableData.textContent);
+if(mb <= available){
+selectedQualityMB = mb;
+updateQualityColors();
+}
+});
+});
+
+function startSimulation() {
+clearInterval(simulationInterval);
+let total = parseInt(totalDataInput.value);
+const reserve = parseInt(reserveSlider.value);
+let available = total - reserve;
+let used = 0;
+progressFill.style.width = "0%";
+dataUsedText.textContent = `Data Used: 0 MB`;
+
+if(selectedQualityMB === 0){
+alert("No playable quality available!");
+return;
+}
+
+simulationInterval = setInterval(() => {
+used += Math.ceil(selectedQualityMB / 10); // simulate 10-second video steps
+if(used >= available){
+used = available;
+clearInterval(simulationInterval);
+alert("⚠️ Data limit reached. Video paused.");
+}
+const percent = (used / available) * 100;
+progressFill.style.width = percent + "%";
+dataUsedText.textContent = `Data Used: ${used} MB / ${available} MB`;
+}, 500);
+}
+
+playBtn.addEventListener("click", startSimulation);
+
+updateQualityColors();
+</script>
