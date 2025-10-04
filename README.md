@@ -85,6 +85,7 @@ Design a **data-conscious interface** that:
 ## Demo
 
 - **Demo Prototype:** [Concious MB](https://raguram-n.github.io/Conscious-MB/)
+- **Demo Video:** [Watch Here](https://github.com/Raguram-N/Conscious-MB/blob/main/demo%20video.mp4) - (Click "view raw" to download the video)
 
 ---
 
