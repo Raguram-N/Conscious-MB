@@ -137,8 +137,20 @@ This ensures you **never run out of data** when you need it most.
 - 📡 **Smart Alerts:** Notification when nearing data exhaustion.  
 - 🔋 **Eco Mode:** Compresses stream when network weakens, saving MB.  
 
+--- 
+
+
+## 🔑 Takeaway  
+
+**Know Your Data, Enjoy Your Video**  
+
+
 ---
 
-## 🧱 Prototype / Wireframes  
-Add UI mockups here once ready.  
-Example file path:  
+
+## ✍️ Author  
+**RAGURAM NARAYANASWAMY**  
+
+## 📂 Repo Purpose  
+**Product Case Study & Growth Proposal for You-Tube**  
+
