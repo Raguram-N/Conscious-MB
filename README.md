@@ -20,20 +20,13 @@ When users have **limited mobile data (e.g., 250 MB)** but still want to watch a
 
 ## ✨ the story - the spark
 
-> I was on my way to an interview with only **250 MB of data** left. I needed to watch a short 2-minute coding tutorial, but I also had practical needs: paying the cab fare and sending my location to > a friend.  
+> I was on my way to an interview with only **250 MB of data** left. I needed to watch a short 2-minute coding tutorial, but I also had practical needs: paying the cab fare and sending my location to  a friend.  
 
 A dilemma struck me:  
 - Watching the tutorial might consume **100 MB**, leaving just **150 MB for essential tasks**.  
 - Miscalculating could leave me without data at a critical moment.  
 
 This inspired **Conscious MB** — a tool to help users **balance learning, entertainment, and essential connectivity** by showing **data usage before hitting play** and letting them **reserve MB for emergencies**.  
-
----
-
-**Conscious MB** reimagines YouTube’s **Quality Selection Menu** by adding:  
-- 💾 Estimated MB usage beside each resolution.  
-- 🧩 A **Data Reserve Slider** to hold MB for emergencies.  
-- 🟢🔴 **Color-coded quality indicators** based on remaining usable data.  
 
 ---
 
@@ -93,6 +86,11 @@ Design a **data-conscious interface** that:
 | 360p  | ≈ 180 MB | 🟢 Playable |
 | 240p  | ≈ 140 MB | 🟢 Playable |
 | 144p  | ≈ 120 MB | 🟢 Playable |
+
+**Conscious MB** reimagines YouTube’s **Quality Selection Menu** by adding:  
+- 💾 Estimated MB usage beside each resolution.  
+- 🧩 A **Data Reserve Slider** to hold MB for emergencies.  
+- 🟢🔴 **Color-coded quality indicators** based on remaining usable data.  
 
 
 ---
@@ -159,15 +157,15 @@ This ensures you **never run out of data** when you need it most.
 
 ## 🔑 Takeaway  
 
-**Know Your Data, Enjoy Your Video**  
+- Know Your Data, Enjoy Your Video
 
 
 ---
 
 
 ## ✍️ Author  
-**RAGURAM NARAYANASWAMY**  
+- RAGURAM NARAYANASWAMY
 
 ## 📂 Repo Purpose  
-**Product Case Study & Growth Proposal for You-Tube**  
+- Product Case Study & Growth Proposal for You-Tube
 
