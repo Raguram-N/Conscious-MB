@@ -144,16 +144,6 @@ This ensures you **never run out of data** when you need it most.
 
 ---
 
-## 🔮 Future Enhancements  
-
-- 🤖 **AI Prediction:** Suggests “Best quality within remaining data.”  
-- 📥 **Offline Buffer Mode:** Auto-pause before exceeding data cap.  
-- 📊 **Daily Data Summary:** “You used 230 MB today.”  
-- 📡 **Smart Alerts:** Notification when nearing data exhaustion.  
-- 🔋 **Eco Mode:** Compresses stream when network weakens, saving MB.  
-
---- 
-
 
 ## 🔑 Takeaway  
 
