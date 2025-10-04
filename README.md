@@ -78,6 +78,14 @@ Design a **data-conscious interface** that:
 | 240p  | ≈ 140 MB | 🟢 Playable |
 | 144p  | ≈ 120 MB | 🟢 Playable |
 
+
+---
+
+
+## Demo
+
+- **Demo Prototype:** [Concious MB](https://raguram-n.github.io/Conscious-MB/)
+
 ---
 
 ## ✨ Feature Highlight: Emergency MB Lock  
