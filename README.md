@@ -10,6 +10,17 @@
 
 ## ✨ The story - The spark
 
+<table>
+<tr>
+<td width="40%" align="center" valign="middle">
+
+<img src="concious MB.png" width="95%" alt="Just Click - Story Illustration" style="border-radius:10px; box-shadow: 0px 0px 8px rgba(0,0,0,0.2);" />
+
+</td>
+<td width="60%" valign="top">
+
+**Picture this:**
+
 > I was on my way to an interview with only **250 MB of data** left. I needed to watch a short 2-minute coding tutorial, but I also had practical needs: paying the cab fare and sending my location to  a friend.  
 
 A dilemma struck me:  
@@ -25,6 +36,10 @@ When users have **limited mobile data (e.g., 250 MB)** but still want to watch a
 - Will my data last till the end?  
 - Should I save some for GPay, Maps, or messages?  
 - Which quality should I choose to fit my remaining MB?  
+
+</td>
+</tr>
+</table>
 
 ---
 
