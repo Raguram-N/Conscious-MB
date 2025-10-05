@@ -123,7 +123,7 @@ Design a **data-conscious interface** that:
 
 <table>
 <tr>
-<td width="40%" align="center" valign="middle">
+<td width="25%" align="center" valign="middle">
 
 <img src="generated-image.png" width="95%" alt="Just Click - Story Illustration" style="border-radius:10px; box-shadow: 0px 0px 8px rgba(0,0,0,0.2);" />
 
