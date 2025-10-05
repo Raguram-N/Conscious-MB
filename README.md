@@ -89,6 +89,7 @@ Design a **data-conscious interface** that:
 
 ## 🧩 Proposed Solution – “Smart Data Indicator”  
 
+
 ### 🎛️ UI Enhancement: Quality Menu  
 
 | Quality | Estimated Data (10-min video) | Indicator |
@@ -99,6 +100,7 @@ Design a **data-conscious interface** that:
 | 360p  | ≈ 180 MB | 🟢 Playable |
 | 240p  | ≈ 140 MB | 🟢 Playable |
 | 144p  | ≈ 120 MB | 🟢 Playable |
+
 
 **Conscious MB** reimagines YouTube’s **Quality Selection Menu** by adding:  
 - 💾 Estimated MB usage beside each resolution.  
@@ -118,6 +120,15 @@ Design a **data-conscious interface** that:
 
 ## ✨ Feature Highlight: Emergency MB Lock  
 
+<table>
+<tr>
+<td width="40%" align="center" valign="middle">
+
+<img src="generated-image.png" width="95%" alt="Just Click - Story Illustration" style="border-radius:10px; box-shadow: 0px 0px 8px rgba(0,0,0,0.2);" />
+
+</td>
+<td width="60%" valign="top">
+
 ### 🔐 “Lock Data for Emergencies”  
 
 - Users can **lock a portion of their data (e.g., 100 MB)** for emergency use (GPay, Maps, etc.).  
@@ -131,6 +142,10 @@ If you have **250 MB total** and lock **100 MB**, YouTube shows:
 > Qualities exceeding 150 MB will appear in red (🔴).  
 
 This ensures you **never run out of data** when you need it most.
+
+</td>
+</tr>
+</table>
 
 ---
 
