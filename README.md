@@ -118,7 +118,8 @@ Design a **data-conscious interface** that:
 
 ---
 
-## ✨ Feature Highlight: Emergency MB Lock  
+## ✨ Feature Highlight: 
+> **Emergency MB Lock**  
 
 <table>
 <tr>
