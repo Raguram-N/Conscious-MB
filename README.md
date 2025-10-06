@@ -149,7 +149,15 @@ This ensures you **never run out of data** when you need it most.
 </table>
 
 ---
+<table>
+<tr>
+<td width="55%" align="center" valign="middle">
 
+<img src="100 MB lock'.png" width="200%" alt="Just Click - Story Illustration" style="border-radius:10px; box-shadow: 0px 0px 8px rgba(0,0,0,0.2);" />
+
+</td>
+<td width="60%" valign="top">
+   
 ## ⚙️ How It Works  
 
 1. User inputs or allows system to detect remaining data.  
@@ -159,6 +167,9 @@ This ensures you **never run out of data** when you need it most.
    - 🟢 Green = Safe quality options.  
    - 🔴 Red = Exceeds safe limit.  
 5. Playback runs with a **real-time MB counter overlay** for transparency.  
+</td>
+</tr>
+</table>
 
 ---
 
